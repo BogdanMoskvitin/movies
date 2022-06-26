@@ -1,0 +1,24 @@
+<div class="header__container">
+  <div class="header__wrapper">
+    <p class="header__title" [routerLink]="['']">Movies</p>
+    
+    <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="fill" style="width: 300px;">
+        <mat-label>Найти фильм</mat-label>
+        <input type="text"
+               placeholder="Введите название фильма"
+               aria-label="Number"
+               matInput
+               [formControl]="myControl"
+               [matAutocomplete]="auto"
+               (input)="inputMovie($event)">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let movie of movies?.results" [value]="movie.title" (click)="openMovie(movie.id)">
+            {{movie.title}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </form>
+
+  </div>
+</div>

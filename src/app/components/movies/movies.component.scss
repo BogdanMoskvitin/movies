@@ -1,0 +1,44 @@
+.movies__container {
+}
+.movies__wrapper {
+  max-width: 1200px;
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.movies__cell {
+  width: 200px;
+  border: 1px solid rgba(255,255,255,.7);
+  border-radius: 10px;
+  padding: 5px;
+  background: #455A64;
+  margin: 10px;
+  cursor: pointer;
+}
+.movies__title {
+  font-size: 20px;
+  color: rgba(255,255,255,.7);
+  text-align: center;
+  margin: 5px 0;
+}
+.movies__img {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid rgba(255,255,255,.7);
+  width: 180px;
+  height: 260px;
+}
+.movies__genres_box {
+  display: flex;
+  width: 180px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.movies__genre {
+  border: 1px solid rgba(255,255,255,.7);;
+  border-radius: 15px;
+  font-size: 12px;
+  color: rgba(255,255,255,.7);
+  padding: 5px;
+  margin: 5px 2px;
+}

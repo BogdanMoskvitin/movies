@@ -1,0 +1,18 @@
+<div class="movies__container">
+  <div class="movies__wrapper">
+    <div 
+      class="movies__cell" 
+      *ngFor="let movie of movies?.results" 
+      [routerLink]="['../movie', movie._id]"
+    >
+      <p class="movies__title">{{movie.titleOriginal}}</p>
+      <img src={{movie.image}} alt="poster" class="movies__img">
+      <div class="movies__genres_box">
+        <div class="movies__genre" *ngFor="let genre of movie.genres">{{genre.uuid}}</div>
+      </div>
+    </div>
+
+    <div id="show" style="width: 100%;"></div>
+  </div>
+</div>
+<app-loader *ngIf="isLoader"></app-loader>

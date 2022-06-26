@@ -1,0 +1,13 @@
+<div class="movie__container">
+  <div class="movie__wrapper">
+    <img src={{movie?.result.image}} alt="poster" class="movie__img">
+    <div class="movie__data">
+      <p class="movie__title">{{movie?.result.titleOriginal}}</p>
+      <div class="movie__genres_box">
+        <div class="movie__genre" *ngFor="let genre of movie?.result.genres">{{genre.uuid}}</div>
+      </div>
+      <span class="movie__description">{{movie?.result.description}}</span>
+    </div>
+  </div>
+</div>
+<app-loader *ngIf="isLoader"></app-loader>
